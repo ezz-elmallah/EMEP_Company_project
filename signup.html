@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/png" href="img/logo.png">
-  <title>Sign In | E.M.E.P</title>
+  <title>Sign Up | E.M.E.P</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* --- CSS VARIABLES --- */
@@ -158,10 +158,21 @@
 </nav>
 
   <div class="signin-card">
+
     <h2>E.M.E.P</h2>
-    <p>Sign in to access your portal</p>
+    <p>Sign Up in to access your portal</p>
     
-    <form action="#">
+      <form action="#">
+        <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" id="user_name" class="user_name" placeholder="e.g. Ezz" required>
+      </div>
+
+          <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" name="user_phone" placeholder="01XXXXXXXXX" required>
+            </div>
+
       <div class="form-group">
         <label for="user_name">Username</label>
         <input type="text" id="user_name" class="user_name" placeholder="e.g. EMEP" required>
@@ -172,11 +183,15 @@
         <input type="password" id="password" class="password" placeholder="••••••••" required>
       </div>
 
-      <button type="submit" class="btn-submit">Sign In</button>
+  <div class="form-group">
+        <label for="password">confirm Password</label>
+        <input type="password" id="password" class="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="btn-submit">Sign up</button>
     </form>
 
     <div class="footer-links">
-      dont have an accpunt ? <a href="signup.html">Sign up</a> <!-- should go to sign up  -->
+      Have a question ? <a href="Contact.html">Contact Support</a> <!-- should go to sign up  -->
     </div>
   </div>
 
