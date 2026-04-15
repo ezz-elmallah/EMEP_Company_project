@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.M.E.P</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+        
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="./img/logo.png" alt="Logo" class="nav-logo" onerror="this.style.display='none'">
+        <span class="logo-text">E.M.E.P</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" style="color: var(--primary-color);">Home</a></li>
+        <li><a href="#schools">Schools</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="slider">
+        <img src="img/img1.jpg" class="active">
+        <img src="img/img2.jpg">
+        <img src="img/img3.jpg">
+        <img src="img/img4.jpg">
+        <img src="img/img5.jpg">
+        <img src="img/img6.jpg">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-text">
+        <h1>Shaping Future Leaders</h1>
+        <p>6 Schools — One Brighter Vision</p>
+        <a href="#schools"><button>Explore Schools</button></a>
+    </div>
+</section>
+
+<div id="schools">
+    <section class="schools">
+    
+        <h2>Our Prestigious Schools</h2>
+        <div class="school-container">
+            <div class="school-card"><img src="img/Logos/logo1.png" alt="School 1"></div>
+            <div class="school-card"><img src="img/Logos/logo2.png" alt="School 2"></div>
+            <div class="school-card"><img src="img/Logos/logo3.png" alt="School 3"></div>
+            <div class="school-card"><img src="img/Logos/logo4.png" alt="School 4"></div>
+            <div class="school-card"><img src="img/Logos/logo5.png" alt="School 5"></div>
+            <div class="school-card"><img src="img/Logos/logo6.png" alt="School 6"></div>
+        </div>
+    </section>
+</div>
+
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slider img");
+
+    function showSlide() {
+        slides.forEach(img => img.classList.remove("active"));
+        slides[index].classList.add("active");
+        index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 4000); // Slightly slower transition for a more elegant feel
+</script>
+
+</body>
+</html>

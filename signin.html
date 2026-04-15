@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | E.M.E.P</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- CSS VARIABLES --- */
+    :root {
+      --primary: #B7987F;
+      --primary-dark: #a3846b;
+      --bg: #f8f9fa;
+      --white: #ffffff;
+      --text: #2d2d2d;
+      --radius: 16px;
+      --shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    /* --- RESET --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      background-image: radial-gradient(circle at 2px 2px, rgba(183, 152, 127, 0.08) 1px, transparent 0);
+      background-size: 30px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: var(--text);
+    }
+
+    /* --- LOGIN CARD --- */
+    .signin-card {
+      background: var(--white);
+      width: 100%;
+      max-width: 420px;
+      padding: 50px 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(183, 152, 127, 0.2);
+      text-align: center;
+    }
+
+    .signin-card h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .signin-card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 35px;
+    }
+
+    /* --- FORM STYLES --- */
+    .form-group {
+      text-align: left;
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 15px;
+      border: 1.5px solid #eee;
+      border-radius: 12px;
+      background-color: #fafafa;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      background-color: #fff;
+      box-shadow: 0 0 0 4px rgba(183, 152, 127, 0.1);
+    }
+
+    /* --- BUTTON --- */
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      margin-top: 10px;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(183, 152, 127, 0.2);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(183, 152, 127, 0.3);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    /* --- LINKS --- */
+    .footer-links {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="./img/logo.png" alt="Logo" class="nav-logo" onerror="this.style.display='none'">
+        <span class="logo-text">E.M.E.P</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="#schools">Schools</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="signin.html" style="color: var(--primary-color);">Sign In</a></li>
+    </ul>
+</nav>
+
+  <div class="signin-card">
+    <h2>E.M.E.P</h2>
+    <p>Sign in to access your portal</p>
+    
+    <form action="#">
+      <div class="form-group">
+        <label for="user_name">Username</label>
+        <input type="text" id="user_name" class="user_name" placeholder="e.g. EMEP" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="password" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+
+    <div class="footer-links">
+      Have a question ? <a href="Contact.html">Contact Support</a> <!-- should go to sign up  -->
+    </div>
+  </div>
+
+</body>
+</html>
