@@ -1,120 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | E.M.E.P</title>
-     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
-    
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | E.M.E.P</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <img src="./img/logo.png" alt="Logo" class="nav-logo" onerror="this.style.display='none'">
-        <span class="logo-text">E.M.E.P</span>
-    </div>
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-left">
+    <img src="./img/logo.png" alt="E.M.E.P Logo" class="nav-logo" onerror="this.style.display='none'">
+    <span class="logo-text">E.M.E.P</span>
+  </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="./index.html">Schools</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="Contact.html" style="color: var(--primary-color);">Contact</a></li>
-        <li><a href="./signin.html">Sign In</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#schools">Schools</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Contact.html" class="active">Contact</a></li>
+    <li><a href="signin.html">Sign In</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#schools">Schools</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Contact.html" class="active">Contact</a></li>
+    <li><a href="signin.html">Sign In</a></li>
+  </ul>
+</div>
+
+<!-- ====== PAGE CONTENT ====== -->
 <main class="page-content">
-    <div class="form-card" id="schools-section">
-        <div class="header">
-            <h2>School Inquiry</h2>
-            <p>Providing excellence in early childhood and school education.</p>
+
+  <div class="about-hero fade-up" style="margin-bottom: 32px;">
+    <div class="tag">Get in Touch</div>
+    <h1 class="highlight-title">School <span>Inquiry</span></h1>
+  </div>
+
+  <div class="form-card fade-up">
+    <div class="header">
+      <h2>Send Us a Message</h2>
+      <p>Providing excellence in early childhood and school education.</p>
+    </div>
+
+    <div class="form-body">
+      <form id="dual-email-form" novalidate>
+
+        <div class="input-group">
+          <label for="user_name">Full Name</label>
+          <input type="text" id="user_name" name="user_name" placeholder="Enter your full name" required autocomplete="name">
         </div>
 
-        <form id="dual-email-form">
-            <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" name="user_name" placeholder="Enter full name" required>
-            </div>
+        <div class="input-group">
+          <label for="user_email">Email Address</label>
+          <input type="email" id="user_email" name="user_email" placeholder="example@mail.com" required autocomplete="email">
+        </div>
 
-            <div class="input-group">
-                <label>Email Address</label>
-                <input type="email" name="user_email" placeholder="example@mail.com" required>
-            </div>
+        <div class="input-group">
+          <label for="user_phone">Phone Number</label>
+          <input type="tel" id="user_phone" name="user_phone" placeholder="01XXXXXXXXX" required autocomplete="tel">
+        </div>
 
-            <div class="input-group">
-                <label>Phone Number</label>
-                <input type="tel" name="user_phone" placeholder="01XXXXXXXXX" required>
-            </div>
+        <div class="input-group">
+          <label for="user_school">School of Interest</label>
+          <select id="user_school" name="user_school" required>
+            <option value="" disabled selected>Select a school</option>
+            <option value="GEMS Academy Alexandria">GEMS Academy Alexandria</option>
+            <option value="Wellington International School">Wellington International School</option>
+            <option value="Wellington International Nursery">Wellington International Nursery</option>
+            <option value="Antoniadis International School">Antoniadis International School</option>
+            <option value="Antoniadis International Nursery">Antoniadis International Nursery</option>
+            <option value="Energize Future Child Care - KSA">Energize Future Child Care — KSA</option>
+          </select>
+        </div>
 
-            <div class="input-group">
-                <label>School of Interest</label>
-                <select name="user_school" required>
-                    <option value="" disabled selected>Select a location</option>
-                    <option value="GEMS Academy Alexandria">GEMS Academy Alexandria</option>
-                    <option value="Wellington International School">Wellington International School</option>
-                    <option value="Wellington International Nursery">Wellington International Nursery</option>
-                    <option value="Antoniadis International School">Antoniadis International School</option>
-                    <option value="Antoniadis International Nursery">Antoniadis International Nursery</option>
-                    <option value="Energize Future Child Care - KSA">Energize Future Child Care - KSA</option>
-                </select>
-            </div>
+        <div class="input-group">
+          <label for="message">Additional Details</label>
+          <textarea id="message" name="message" rows="4" placeholder="How can we assist you?" required></textarea>
+        </div>
 
-            <div class="input-group">
-                <label>Additional Details</label>
-                <textarea name="message" rows="4" placeholder="How can we assist you?" required></textarea>
-            </div>
+        <button type="submit" id="submit-btn">Submit Inquiry</button>
 
-            <button type="submit" id="submit-btn">Submit Inquiry</button>
-        </form>
-
-        <div id="status-banner" class="status-msg"></div>
+        <div id="status-banner" class="status-msg" role="status" aria-live="polite"></div>
+      </form>
     </div>
+  </div>
+
 </main>
 
-<script type="text/javascript">
-    (function() {
-        emailjs.init("CnpIxhaOLNzG5QBMc");
-    })();
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  © 2025 <span>E.M.E.P</span> · El Maaly for Educational Projects · Alexandria, Egypt
+</footer>
 
-    const form = document.getElementById('dual-email-form');
-    const btn = document.getElementById('submit-btn');
-    const banner = document.getElementById('status-banner');
+<script>
+  /* --- Navbar --- */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        btn.innerText = 'Sending...';
-        btn.disabled = true;
-
-        const serviceID = 'service_tf1g9wj';
-        const customerTemplateID = 'template_42tqfoe'; 
-        const ownerTemplateID = 'template_j0igvij';    
-
-        const sendCustomer = emailjs.sendForm(serviceID, customerTemplateID, this);
-        const sendOwner = emailjs.sendForm(serviceID, ownerTemplateID, this);
-
-        Promise.all([sendCustomer, sendOwner])
-            .then(() => {
-                btn.innerText = 'Submit Inquiry';
-                btn.disabled = false;
-                banner.innerText = '✓ Inquiry sent successfully! Check your email for confirmation.';
-                banner.className = 'status-msg success';
-                form.reset();
-                setTimeout(() => { banner.style.display = 'none'; }, 6000);
-            })
-            .catch((err) => {
-                btn.innerText = 'Submit Inquiry';
-                btn.disabled = false;
-                alert('An error occurred. Please try again.');
-                console.error('EmailJS Error:', err);
-            });
+  /* --- Hamburger --- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+      document.body.style.overflow = '';
     });
-</script>
+  });
 
+  /* --- EmailJS --- */
+  (function() { emailjs.init("CnpIxhaOLNzG5QBMc"); })();
+
+  const form    = document.getElementById('dual-email-form');
+  const btn     = document.getElementById('submit-btn');
+  const banner  = document.getElementById('status-banner');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    const SERVICE   = 'service_tf1g9wj';
+    const CUST_TPL  = 'template_42tqfoe';
+    const OWNER_TPL = 'template_j0igvij';
+
+    Promise.all([
+      emailjs.sendForm(SERVICE, CUST_TPL, this),
+      emailjs.sendForm(SERVICE, OWNER_TPL, this)
+    ]).then(() => {
+      btn.textContent = 'Submit Inquiry';
+      btn.disabled = false;
+      banner.textContent = '✓ Inquiry sent successfully! Check your email for confirmation.';
+      banner.className = 'status-msg success';
+      form.reset();
+      setTimeout(() => { banner.className = 'status-msg'; }, 7000);
+    }).catch(err => {
+      btn.textContent = 'Submit Inquiry';
+      btn.disabled = false;
+      banner.textContent = '✗ Something went wrong. Please try again.';
+      banner.className = 'status-msg error';
+      console.error('EmailJS Error:', err);
+    });
+  });
+
+  /* --- Fade up observer --- */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>

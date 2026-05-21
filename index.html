@@ -1,79 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | E.M.E.P</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | E.M.E.P</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <img src="./img/logo.png" alt="Logo" class="nav-logo" onerror="this.style.display='none'">
-        <span class="logo-text">E.M.E.P</span>
-    </div>
+<!-- ====== NAVBAR ====== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-left">
+    <img src="./img/logo.png" alt="E.M.E.P Logo" class="nav-logo" onerror="this.style.display='none'">
+    <span class="logo-text">E.M.E.P</span>
+  </div>
 
-    <ul class="nav-links">
-        <li><a href="index.html" style="color: var(--primary-color);">Home</a></li>
-        <li><a href="#schools">Schools</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li><a href="signin.html">Sign In</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#schools">Schools</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="signin.html">Sign In</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<section class="hero">
-    <div class="slider">
-        <img src="img/img1.jpg" class="active">
-        <img src="img/img2.jpg">
-        <img src="img/img3.jpg">
-        <img src="img/img4.jpg">
-        <img src="img/img5.jpg">
-        <img src="img/img6.jpg">
-    </div>
-
-    <div class="overlay"></div>
-
-    <div class="hero-text">
-        <h1>Shaping Future Leaders</h1>
-        <p>6 Schools — One Brighter Vision</p>
-        <a href="#schools"><button>Explore Schools</button></a>
-    </div>
-</section>
-
-<div id="schools">
-    <section class="schools">
-    
-        <h2>Our Prestigious Schools</h2>
-        <div class="school-container">
-            <div class="school-card"><img src="img/Logos/logo1.png" alt="School 1"></div>
-            <div class="school-card"><img src="img/Logos/logo2.png" alt="School 2"></div>
-            <div class="school-card"><img src="img/Logos/logo3.png" alt="School 3"></div>
-            <div class="school-card"><img src="img/Logos/logo4.png" alt="School 4"></div>
-            <div class="school-card"><img src="img/Logos/logo5.png" alt="School 5"></div>
-            <div class="school-card"><img src="img/Logos/logo6.png" alt="School 6"></div>
-        </div>
-    </section>
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="#schools">Schools</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="signin.html">Sign In</a></li>
+  </ul>
 </div>
 
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="slider">
+    <img src="img/img1.jpg" class="active" alt="">
+    <img src="img/img2.jpg" alt="">
+    <img src="img/img3.jpg" alt="">
+    <img src="img/img4.jpg" alt="">
+    <img src="img/img5.jpg" alt="">
+    <img src="img/img6.jpg" alt="">
+  </div>
+  <div class="overlay"></div>
+
+  <div class="hero-text">
+    <p>El Maaly for Educational Projects</p>
+    <h1>Shaping<br>Future Leaders</h1>
+    <a href="#schools" class="btn-hero">Explore Schools</a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="arrow"></div>
+  </div>
+</section>
+
+<!-- ====== SCHOOLS ====== -->
+<div id="schools">
+  <section class="schools">
+    <div class="tag fade-up">Our Institutions</div>
+    <h2 class="fade-up" style="animation-delay:0.1s">Our Schools</h2>
+    <div class="section-line fade-up" style="animation-delay:0.2s"></div>
+
+    <div class="school-container">
+      <div class="school-card fade-up" style="animation-delay:0.1s"><img src="img/Logos/logo1.png" alt="GEMS Academy Alexandria"></div>
+      <div class="school-card fade-up" style="animation-delay:0.18s"><img src="img/Logos/logo2.png" alt="Wellington International School"></div>
+      <div class="school-card fade-up" style="animation-delay:0.26s"><img src="img/Logos/logo3.png" alt="Wellington International Nursery"></div>
+      <div class="school-card fade-up" style="animation-delay:0.34s"><img src="img/Logos/logo4.png" alt="Antoniadis International School"></div>
+      <div class="school-card fade-up" style="animation-delay:0.42s"><img src="img/Logos/logo5.png" alt="Antoniadis International Nursery"></div>
+      <div class="school-card fade-up" style="animation-delay:0.50s"><img src="img/Logos/logo6.png" alt="Energize Future Child Care - KSA"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  © 2025 <span>E.M.E.P</span> · El Maaly for Educational Projects · Alexandria, Egypt
+</footer>
+
 <script>
-    let index = 0;
-    const slides = document.querySelectorAll(".slider img");
+  /* --- Navbar scroll shadow --- */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
+  }, { passive: true });
 
-    function showSlide() {
-        slides.forEach(img => img.classList.remove("active"));
-        slides[index].classList.add("active");
-        index = (index + 1) % slides.length;
-    }
+  /* --- Hamburger / Mobile menu --- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
 
-    setInterval(showSlide, 4000); // Slightly slower transition for a more elegant feel
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* --- Slideshow --- */
+  let idx = 0;
+  const slides = document.querySelectorAll('.slider img');
+  function nextSlide() {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }
+  setInterval(nextSlide, 4200);
+
+  /* --- Scroll fade-up observer --- */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
